@@ -1,0 +1,38 @@
+extends ../_common/_main
+	
+block title
+	| Мои работы
+
+block style
+	// portfolio:css
+	// endinject	
+
+block navigation
+	+navigation(1)
+
+block contacts
+	+contacts
+
+block articleOne
+	// My Works Galery
+	include _works_gallery_content
+	
+
+	// Popup for adding new project
+	include _popup_my-portfolio
+			
+
+
+
+
+block articleTwo
+	//- No Info
+	
+
+block articleThree
+	//- No Info
+	
+
+block scripts
+	// portfolio:js
+	// endinject

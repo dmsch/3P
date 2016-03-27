@@ -1,0 +1,12 @@
+header.header
+	.header__container-big
+		a(href="../").header__container-big__logo
+			img(src="/img/logo.png" alt="logo").header__container-big__logo--img
+			span.header__container-big__logo--text Сайт портфолио
+
+		- var socia = {'vk': 'https://vk.com/m.dostarbekov', 'fb': 'https://www.facebook.com/m.dostarbekov', 'tw': 'https://twitter.com/', 'gh': 'https://github.com/'};
+
+		ul.header__container-big__socials
+			+socials(socia)
+
+	.header__nav-bar

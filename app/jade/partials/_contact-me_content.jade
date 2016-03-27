@@ -1,0 +1,30 @@
+// Contact Form
+article.infobox-contact-form
+	h2.infobox-contact-form__header
+		| У вас интересный проект? Напишите мне
+	.infobox-contact-form__wrapper
+		form(action="sendform.php").my-form
+			.infobox-contact-form__wrapper__name-email
+				.infobox-contact-form__wrapper__name-email__contact-name
+					label.my-label
+						| Имя
+					input(type="text", id="contactName", name="contactName", placeholder="Как к Вам обращаться").my-input
+				.infobox-contact-form__wrapper__name-email__contact-email
+					label.my-label
+						| Email
+					input(type="text", id="contactEmail", name="contactEmail", placeholder="Куда мне писать").my-input
+			.infobox-contact-form__wrapper__message
+				label.my-label-message
+					| Сообщение
+				textarea(name="inputMessage", id="inputMessage", cols="30", rows="10", placeholder="Кратко в чем суть").my-input-message
+			.infobox-contact-form__wrapper__capcha
+				p.capcha-label
+					| Введите код, указанный на картинке
+				.capcha-img-wrapper
+					img(src="../img/capcha.png" alt="capcha.png").capcha-img
+				input(type="text", id="capchaInput", name="capchaInput", placeholder="Введите код").capcha-input
+			.buttons
+				button(type="submit").button-send
+					| Отправить
+				button(type="reset").button-clear
+					| Очистить

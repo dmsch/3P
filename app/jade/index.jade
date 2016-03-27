@@ -1,0 +1,79 @@
+extends _common/_main
+	
+block title
+	| Главная страница
+
+block style
+	// about-me:css
+	// endinject	
+
+block navigation
+	+navigation(0)
+
+block contacts
+	+contacts
+
+block articleOne
+	// Personal Info
+	article.infobox-general
+		h2.infobox-general__header
+			| Основная информация
+		.infobox-general__info
+			.infobox-general__info__img-wrapper.clearfix
+				.infobox-general__info__img-wrapper__pers-img
+					.infobox-general__info__img-wrapper__pers-img__inner
+			.infobox-general__info__personal-info-wrapper
+				- var persInfo = [{'Меня зовут:': 'Марат Достарбеков'}, {'Мой возраст:': '27 лет'}, {'Мой город:': 'Астана, Казахстан'}, {'Моя специализация:': 'Дизайнер'}];
+				ul.infobox-general__info__personal-info-wrapper__list
+					each item, index in persInfo
+						each value, key in item
+							li.infobox-general__info__personal-info-wrapper__list__item.clearfix
+								.infobox-general__info__personal-info-wrapper__list__item__topic= key
+								.infobox-general__info__personal-info-wrapper__list__item__content= value
+					li.infobox-general__info__personal-info-wrapper__list__item.clearfix
+						.infobox-general__info__personal-info-wrapper__list__item__topic
+							|  Ключевые навыки:
+						.infobox-general__info__personal-info-wrapper__list__item__content
+							- var skills = ['Adobe Photoshop', 'Adobe Illustrator', 'Axure', 'Веб-дизайн', 'UX/UI', 'Дизайн интерфейсов'];
+							ul.infobox-general__info__personal-info-wrapper__list__item__content_key-skills-list
+								each item, index in skills
+									li.infobox-general__info__personal-info-wrapper__list__item__content_key-skills-list__item= item
+
+
+
+block articleTwo
+	// Employment Info
+	article.infobox-empl
+		h2.infobox-empl__header
+			| Опыт работы
+		.infobox-empl__info
+			ul.infobox-empl__info_list
+				- var empl = [{'img': 'portfolio', 'title': 'Ведущий специалист по дизайну  интерфейсов', 'org': 'Beeline ТМ', 'dates': 'октябрь 2015 – настоящее время'}, {'img': 'portfolio', 'title': 'UI/UX Дизайнер интерфейсов', 'org': 'ТОО «Wooppay»', 'dates': 'октябрь 2013 – сентябрь 2015'}, {'img': 'portfolio', 'title': 'Дизайнер', 'org': 'Корпорация «Тема»', 'dates': 'август 2013 – сентябрь 2013'}, {'img': 'portfolio', 'title': 'Менеджер', 'org': 'TOO «Trans Avia Luxe»', 'dates': 'август 2012 – май 2013'}];
+				each item, index in empl
+					li.infobox-empl__info_item.clearfix
+						div(class='infobox-empl__info_item__img-wrapper sprite-misc' + ' #{item.img}')
+						.infobox-empl__info_item__item-wrapper
+							div(class='infobox-empl__info_item__title')= item.title
+							.infobox-empl__info_item__org
+								p.infobox-empl__info_item__org__org= item.org
+								p.infobox-empl__info_item__org__dates= item.dates
+
+block articleThree
+	// Education Info
+	article.infobox-education
+		h2.infobox-education__header
+			| Образование
+		.infobox-education__info
+			ul.infobox-education__info_list
+				- var education = [{'img': 'diploma', 'org': 'Курсы веб дизайна', 'dates': '2012 - 2013'}, {'img': 'graduate', 'org': 'Высшее образование. Карагандинский государственный техни-ческий университет', 'dates': '2007 - 2012'}, {'img': 'school', 'org': 'Среднее образование. Карагандинская ср. школа №23', 'dates': '1996 - 2007'}];
+				each item, index in education
+					li.infobox-education__info_item.clearfix
+						div(class='infobox-education__info_item__img-wrapper sprite-misc' + ' #{item.img}')
+						.infobox-education__info_item__item-wrapper
+							div(class='infobox-education__info_item__org')= item.org
+							.infobox-education__info_item__dates
+								p.infobox-education__info_item__dates__dates= item.dates
+
+block scripts
+	// about-me:js
+	// endinject

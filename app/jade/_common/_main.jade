@@ -1,0 +1,27 @@
+include _mixins
+
+doctype html
+html(lang="ru-RU")
+
+	head
+
+		include _head
+
+	body
+		.wrapper.clearfix
+			.main-content
+				// Header block
+				include _header
+				// Main block
+				.container.clearfix
+					include _sidebar
+					include _content
+		include _footer
+
+		// bower:js
+		// endinject
+
+		// inject:js
+		// endinject
+
+		block scripts

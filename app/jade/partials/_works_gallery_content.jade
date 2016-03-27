@@ -1,0 +1,23 @@
+article.infobox-works
+	h2.infobox-works__header
+		| Мои работы 
+	.infobox-works__info
+		ul.infobox-works__info_list
+			- var works = [{'classAttr': 'nf', 'src': '../img/onMap.png', 'alt': 'onMap.png', 'maskHref': 'https://marvelapp.com/b99if3', 'maskText': 'onMap', 'workLinkHref': 'https://marvelapp.com/b99if3', 'workLinkText': 'onMap', 'workTitle': 'Сайт самостоятельных путешествий'}, {'classAttr': 'bv', 'src': '../img/FitLog.png', 'alt': 'FitLog.png', 'maskHref': 'https://marvelapp.com/ghh9gf', 'maskText': 'FitLog', 'workLinkHref': 'https://marvelapp.com/ghh9gf', 'workLinkText': 'FitLog', 'workTitle': 'Концепт интерфейса для приложения FitLog'}, {'classAttr': 'dz1', 'src': '../img/it-agency.png', 'alt': 'it-agency.png', 'maskHref': 'https://marvelapp.com/a9j1gc#9719933', 'maskText': 'IT-Agency', 'workLinkHref': 'https://marvelapp.com/a9j1gc#9719933', 'workLinkText': 'IT-AGENCY', 'workTitle': 'Сайт агентства IT-AGENCY'}];
+			each item, index in works
+				li.infobox-works__info_item
+					div(class="infobox-works__info_item__img" + " #{item.classAttr}")
+						img(src="#{item.src}" alt="#{item.alt}")
+						.mask
+							a(href="#{item.maskHref}", target="_blank").mask-link= item.maskText
+					.infobox-works__info_item__work-link-wrapper
+						a(href="#{item.workLinkHref}", target="_blank").work-link= item.workLinkText
+					.infobox-works__info_item__work-title-wrapper
+						h3.infobox-works__info_item__work-title= item.workTitle
+
+			- for (var i = 0; i < 1; i++)
+				li.infobox-works__info_item--add-new-work
+					a(href="", target="_blank").add-new-project-link
+						.add-new-work-wrapper.sprite-misc.add-work
+						.work-title-add-new-work
+							| Добавить проект

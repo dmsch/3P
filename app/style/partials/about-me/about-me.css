@@ -1,0 +1,336 @@
+/* Personal Picture */
+.infobox-general__info__img-wrapper
+{
+    float: left;
+    width: 200px;
+    margin-bottom: 0;
+}
+
+.infobox-general__info__img-wrapper__pers-img
+{
+    position: relative;
+    overflow: hidden;
+    width: 152px;
+    height: 152px;
+    margin: 0px 0 0 42px; 
+    border: 1px #d5d3d2;
+    border-style: solid;
+    border-radius: 50%;
+
+}
+
+.infobox-general__info__img-wrapper__pers-img__inner
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border: 8px #f5f4f3;
+    border-style: solid;
+    border-radius: 50%;
+    background: url(/img/Me.png);
+    background-size: 110%;
+    background-position: 50% 10%;
+}
+
+/* Personal Info */
+
+.infobox-general__info
+{
+    margin-bottom: 39px;
+}
+
+.infobox-general__info__personal-info-wrapper
+{
+    float: right;
+    width: 378px;
+    margin: 0px 43px 0 0;
+}
+
+.infobox-general__info__personal-info-wrapper__list
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.infobox-general__info__personal-info-wrapper__list__item__topic
+{
+    font-family: 'open_sans_semibold';
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.2;
+    float: left;
+    max-width: 155px;
+    padding: 5px 5px 5px 0;
+    text-align: left;
+    word-break: break-all;
+    color: rgb(114, 112, 112);
+}
+
+
+.infobox-general__info__personal-info-wrapper__list__item__content
+{
+    font-family: 'open_sans_regular';
+    font-size: 14px;
+    line-height: 1.2;
+    float: left;
+    max-width: 220px;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    word-break: break-all;
+    word-break: break-all;
+    color: rgb(114, 112, 112);
+}
+
+.infobox-general__info__personal-info-wrapper__list__item:last-child .infobox-general__info__personal-info-wrapper__list__item__topic
+{
+    padding: 15px 5px 5px 0;
+}
+
+.infobox-general__info__personal-info-wrapper__list__item:last-child .infobox-general__info__personal-info-wrapper__list__item__content
+{
+    line-height: 2.57;
+}
+
+.infobox-general__info__personal-info-wrapper__list__item__content_key-skills-list
+{
+    width: 234px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.infobox-general__info__personal-info-wrapper__list__item__content_key-skills-list__item
+{
+    font-family: 'open_sans_semibold';
+    font-size: 9px;
+    font-style: normal;
+    display: inline-block;
+    min-width: 30px;
+    max-width: 230px;
+    height: 21px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    color: rgb(30, 116, 101);
+    background: url(../../../img/label-center.png);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .45);
+}
+
+.infobox-general__info__personal-info-wrapper__list__item__content_key-skills-list__item:before
+{
+    position: relative;
+    top: -2.5px;
+    right: 9px;
+    display: inline-block;
+    width: 9px;
+    height: 20px;
+    padding: 0;
+    content: '';
+    vertical-align: middle;
+    background-image: url(../../../img/sprite-label.png);
+    background-position: -41px -5px;
+}
+
+.infobox-general__info__personal-info-wrapper__list__item__content_key-skills-list__item:after
+{
+    position: relative;
+    top: -2.5px;
+    left: 5px;
+    display: inline-block;
+    width: 9px;
+    height: 20px;
+    padding: 0;
+    content: '';
+    vertical-align: middle;
+    background-image: url(../../../img/sprite-label.png);
+    background-position: -61px -5px;
+}
+
+/* Employment & Education Info ================================================================= */
+
+/* .infobox-header.empl {
+    margin: 0;
+}
+ */
+.infobox-empl__info,
+.infobox-education__info
+{
+    width: 565px;
+    margin: 0 auto;
+}
+
+.infobox-empl__info_list,
+.infobox-education__info_list
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.infobox-empl__info_item,
+.infobox-education__info_item
+{
+    position: relative;
+}
+
+.infobox-empl__info_item:not(:last-child):after,
+.infobox-education__info_item:not(:last-child):after
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    margin-bottom: 5px;
+
+    content: '';
+
+    border-bottom: 2px #dbdbda solid;
+}
+
+.infobox-empl__info_item__img-wrapper,
+.infobox-education__info_item__img-wrapper
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: inline-block;
+
+    width: 53px;
+    height: 54px;
+    margin: auto 0 auto 0;
+
+    border-radius: 50%;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, .004),inset 2px 2px .5px .5px rgba(209, 209, 209, .75);
+}
+
+.infobox-empl__info_item__item-wrapper,
+.infobox-education__info_item__item-wrapper
+{
+    float: right;
+
+    width: 470px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.sprite-misc:after
+{
+    background-image: url(../../../img/sprite-misc.png);
+    background-repeat: no-repeat;
+}
+
+.infobox-empl__info_item__title,
+.infobox-education__info_item__org
+{
+    font-family: 'open_sans_semibold';
+    font-size: 14px;
+    line-height: 1.2;/*line-height: 1.65;*/
+    padding: 4px 10px 4px 0;
+
+    word-break: break-all;
+
+    color: rgb(114, 112, 112);
+}
+
+
+.infobox-empl__info_item__org,
+.infobox-education__info_item__dates
+{
+    font-family: 'open_sans_regular';
+    font-size: 14px;
+    line-height: 1.65;
+    padding-right: 10px;
+
+    word-break: break-all;
+
+    color: rgb(114, 112, 112);
+}
+
+.portfolio:after
+{
+    display: block;
+
+    width: 21px;
+    height: 19px;
+    margin: 0 auto;
+    margin-top: 17px;
+
+    content: '';
+    vertical-align: middle;
+
+    background-position: -5px -5px;
+}
+
+.infobox-empl__info_item__org__org,
+.infobox-empl__info_item__org__dates,
+.infobox-education__info_item__dates__dates
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* End of Employment Info ================================================================= */
+
+/* Education Info ================================================================= */
+
+.school:after
+{
+    display: block;
+
+    width: 21px;
+    height: 21px;
+    margin: 0 auto;
+    margin-top: 17px;
+
+    content: '';
+    vertical-align: middle;
+
+    background-position: -249px -5px;
+}
+
+.graduate:after
+{
+    display: block;
+
+    width: 27px;
+    height: 18px;
+    margin: 0 auto;
+    margin-top: 17px;
+
+    content: '';
+    vertical-align: middle;
+
+    background-position: -87px -5px;
+}
+
+.diploma:after
+{
+    display: block;
+
+    width: 15px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 17px;
+
+    content: '';
+    vertical-align: middle;
+
+    background-position: -62px -5px;
+}
+
+
+
+/* End of Education Info ================================================================= */

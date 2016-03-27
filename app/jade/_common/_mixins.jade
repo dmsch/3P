@@ -1,0 +1,30 @@
+mixin socials(soc)
+	each value, key in soc
+		li.header__container-big__socials__item
+			a(
+				href="#{value}"
+				target="_blank"
+				class="header__container-big__socials__link header__container-big__socials__link--#{key}"
+			)
+				| #{value}
+
+mixin navigation(activeIndex)
+	- var nav = [{'/index.html': 'Обо мне'}, {'/partials/my-portfolio.html': 'Мои Работы'}, {'/partials/contact-me.html': 'Обратная связь'}];
+	nav.navigation
+		ul.nav-list
+			each item, index in nav
+				li(class='nav-list__item' + ((activeIndex == index) ? '--active' : ''))
+					each value, key in item
+						a(href="#{key}", class="nav-list__link")= value
+
+mixin contacts
+	- var cont = [{'mail': {'mailto:m.dostarbekov@gmail.com': 'm.dostarbekov@gmail.com'}}, {'phone': {'tel:+660958235447': '+66 (095) 823-54-47'}}, {'skype': {'skype:dostarbekov': 'dostarbekov'}}];
+	address.my-contacts
+		h3.my-contacts__title
+			| Контакты
+		ul.my-contacts__list
+			each item, index in cont
+				each value, key in item
+					each v_text, k_href in value
+						li(class='my-contacts__list__item--#{key}')
+							a(href="#{k_href}", class="my-contacts__list__link--#{key}")= v_text						

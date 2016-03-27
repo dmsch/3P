@@ -1,0 +1,46 @@
+.add-project-popup
+	span.popup-close-button
+		span
+			| X
+	.add-new-project-wrapper
+		form(action="add_new_project.php").add-new-project-form
+			.project-name
+				label.add-new-project-label
+					| Название проекта
+				input(type="text", id="projectName", name="projectName", placeholder="Введите название").add-new-project-input
+			.project-img
+				label.add-new-project-label
+					| Картинка проекта
+
+				// ======================
+
+				.fileform
+					input(type="text", id="fileformlabel", name="fileformlabel", placeholder="Загрузите изображение")
+					.selectbutton.sprite-misc.add-project
+					input(id="upload", type="file", name="upload")
+
+				// ======================
+
+			.project-url
+				label.add-new-project-label
+					| URL проекта
+				input(type="text", id="projectURL", name="projectURL", placeholder="Добавьте ссылку").add-new-project-input
+			.project-desc
+				label.project-desc-label
+					| Сообщение
+				textarea(name="projectDescMessage", id="projectDescMessage", cols="30", rows="10", placeholder="Пара слов о вашем проекте").project-desc-message
+
+				// Small popup for OK message
+				.popup-ok
+					span.popup-close-button.popupOk
+						span
+							| X
+					.ok-message
+						.ok-mesasage-one
+							| Ура!
+						.ok-mesasage-two
+							| Проект успешно добавлен.
+				.button-wrapper
+					button(type="submit").button-send
+						| Добавить
+
